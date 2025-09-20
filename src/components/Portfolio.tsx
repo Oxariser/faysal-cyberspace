@@ -17,8 +17,8 @@ const Portfolio = () => {
         "Smooth animations and transitions",
         "Professional presentation of skills"
       ],
-      liveUrl: "#",
-      codeUrl: "#"
+      liveUrl: window.location.origin,
+      codeUrl: "https://github.com/your-username/portfolio"
     }
   ];
 
@@ -103,11 +103,19 @@ const Portfolio = () => {
                 </CardContent>
                 <CardFooter>
                   <div className="flex gap-3 w-full">
-                    <Button className="flex-1" variant="default">
+                    <Button 
+                      className="flex-1" 
+                      variant="default"
+                      onClick={() => window.open(project.liveUrl, '_blank')}
+                    >
                       <Globe className="mr-2 h-4 w-4" />
                       View Live
                     </Button>
-                    <Button className="flex-1" variant="outline">
+                    <Button 
+                      className="flex-1" 
+                      variant="outline"
+                      onClick={() => window.open(project.codeUrl, '_blank')}
+                    >
                       <Code className="mr-2 h-4 w-4" />
                       View Code
                     </Button>
