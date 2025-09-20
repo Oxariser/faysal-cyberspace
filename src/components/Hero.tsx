@@ -1,7 +1,7 @@
 import { ArrowRight, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import fahimProfile from '@/assets/fahim-profile.jpg';
+import fahimProfile from '@/assets/fahim-profile-new.jpg';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -109,14 +109,14 @@ const Hero = () => {
                 <img
                   src={fahimProfile}
                   alt="Md. Fahim Faysal - Cybersecurity Enthusiast"
-                  className="w-full max-w-lg mx-auto rounded-2xl shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300"
+                  className="w-full max-w-lg mx-auto rounded-full shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300 aspect-square object-cover"
                 />
                 
                 {/* Holographic Overlay */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 via-transparent to-cyber-blue/10 animate-gradient-shift"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-transparent to-cyber-blue/10 animate-gradient-shift"></div>
                 
                 {/* Scanning Line Effect */}
-                <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                <div className="absolute inset-0 rounded-full overflow-hidden">
                   <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent animate-scan-line"></div>
                 </div>
               </div>
