@@ -1,6 +1,7 @@
 import { ArrowRight, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { generateCV } from '@/utils/generateCV';
 import fahimProfile from '@/assets/fahim-profile-new.jpg';
 
 const Hero = () => {
@@ -77,7 +78,7 @@ const Hero = () => {
                   View My Work
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button variant="outline" className="group hover-glow">
+                <Button variant="outline" className="group hover-glow" onClick={generateCV}>
                   <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
                   Download CV
                 </Button>
