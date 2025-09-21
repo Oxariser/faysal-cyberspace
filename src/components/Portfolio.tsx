@@ -41,31 +41,31 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Portfolio & Projects</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+    <section id="portfolio" className="py-16 sm:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Portfolio & Projects</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Showcasing my development skills and cybersecurity projects as I build my professional portfolio
           </p>
         </div>
 
         {/* Current Projects */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8">Current Projects</h3>
+        <div className="mb-12 sm:mb-16">
+          <h3 className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8">Current Projects</h3>
           <div className="grid lg:grid-cols-1 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="skill-card">
                 <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
-                      <div className="flex gap-2 mb-3">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+                    <div className="flex-1">
+                      <CardTitle className="text-lg sm:text-xl mb-2">{project.title}</CardTitle>
+                      <div className="flex flex-wrap gap-2 mb-3">
                         <Badge variant="secondary">{project.category}</Badge>
                         <Badge className="bg-cyber-blue text-white">{project.status}</Badge>
                       </div>
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 self-start">
                       <Button variant="outline" size="icon">
                         <Github className="h-4 w-4" />
                       </Button>
@@ -80,10 +80,10 @@ const Portfolio = () => {
                   
                   <div className="mb-4">
                     <h4 className="font-semibold mb-2">Key Features:</h4>
-                    <ul className="grid sm:grid-cols-2 gap-2">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {project.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm">
-                          <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                          <div className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></div>
                           {feature}
                         </li>
                       ))}
@@ -102,7 +102,7 @@ const Portfolio = () => {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <div className="flex gap-3 w-full">
+                  <div className="flex flex-col sm:flex-row gap-3 w-full">
                     <Button 
                       className="flex-1" 
                       variant="default"
@@ -128,8 +128,8 @@ const Portfolio = () => {
 
         {/* Upcoming Projects */}
         <div>
-          <h3 className="text-2xl font-semibold mb-8">Upcoming Projects</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h3 className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8">Upcoming Projects</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {upcomingProjects.map((project, index) => (
               <Card key={index} className="skill-card">
                 <CardContent className="p-6">
@@ -147,9 +147,9 @@ const Portfolio = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12 p-8 bg-muted/30 rounded-xl">
-          <h3 className="text-xl font-semibold mb-4">More Projects Coming Soon!</h3>
-          <p className="text-muted-foreground mb-6">
+        <div className="text-center mt-8 sm:mt-12 p-6 sm:p-8 bg-muted/30 rounded-xl">
+          <h3 className="text-lg sm:text-xl font-semibold mb-4">More Projects Coming Soon!</h3>
+          <p className="text-sm sm:text-base text-muted-foreground mb-6">
             I'm constantly working on new cybersecurity projects and tools. 
             Follow my journey and connect with me to see my latest work.
           </p>

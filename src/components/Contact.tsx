@@ -90,21 +90,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+    <section id="contact" className="py-16 sm:py-20 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Get In Touch</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Ready to discuss cybersecurity opportunities, collaborations, or just want to connect? 
             I'd love to hear from you!
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-center lg:text-left">Let's Connect</h3>
               <p className="text-muted-foreground mb-8">
                 Whether you're a fellow cybersecurity enthusiast, potential mentor, collaborator, 
                 or someone interested in my services, I'm always open to meaningful conversations 
@@ -123,13 +123,13 @@ const Contact = () => {
                   className="block"
                 >
                   <Card className="skill-card cursor-pointer">
-                    <CardContent className="flex items-center p-6">
-                      <div className="p-3 rounded-full bg-primary/10 text-primary mr-4">
+                    <CardContent className="flex items-center p-4 sm:p-6">
+                      <div className="p-2 sm:p-3 rounded-full bg-primary/10 text-primary mr-3 sm:mr-4 flex-shrink-0">
                         {item.icon}
                       </div>
-                      <div>
-                        <div className="font-semibold">{item.label}</div>
-                        <div className="text-sm text-muted-foreground">{item.value}</div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-semibold text-sm sm:text-base">{item.label}</div>
+                        <div className="text-xs sm:text-sm text-muted-foreground break-all">{item.value}</div>
                       </div>
                     </CardContent>
                   </Card>
@@ -155,65 +155,69 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div>
+          <div className="order-1 lg:order-2">
             <Card className="skill-card">
               <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Send className="h-5 w-5 text-primary mr-2" />
+                <CardTitle className="flex items-center text-lg sm:text-xl">
+                  <Send className="h-4 w-4 sm:h-5 sm:w-5 text-primary mr-2" />
                   Send a Message
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Name</label>
+                      <label className="text-xs sm:text-sm font-medium mb-2 block">Name</label>
                       <Input
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Your full name"
+                        className="text-sm sm:text-base"
                         required
                       />
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Email</label>
+                      <label className="text-xs sm:text-sm font-medium mb-2 block">Email</label>
                       <Input
                         name="email"
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="your.email@example.com"
+                        className="text-sm sm:text-base"
                         required
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Subject</label>
+                    <label className="text-xs sm:text-sm font-medium mb-2 block">Subject</label>
                     <Input
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
                       placeholder="What's this about?"
+                      className="text-sm sm:text-base"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Message</label>
+                    <label className="text-xs sm:text-sm font-medium mb-2 block">Message</label>
                     <Textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell me about your project, opportunity, or just say hi!"
-                      rows={5}
+                      className="text-sm sm:text-base"
+                      rows={4}
                       required
                     />
                   </div>
                   
-                  <Button type="submit" className="cyber-button w-full" disabled={isLoading}>
-                    <Send className="mr-2 h-4 w-4" />
+                  <Button type="submit" className="cyber-button w-full text-sm sm:text-base" disabled={isLoading}>
+                    <Send className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                     {isLoading ? 'Sending...' : 'Send Message'}
                   </Button>
                 </form>

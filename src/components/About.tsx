@@ -26,20 +26,20 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+    <section id="about" className="py-16 sm:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">About Me</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             A passionate cybersecurity student dedicated to protecting digital assets and hunting vulnerabilities
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 order-2 lg:order-1">
             <div className="space-y-4">
-              <h3 className="text-2xl font-semibold">My Journey in Cybersecurity</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold text-center lg:text-left">My Journey in Cybersecurity</h3>
               <p className="text-muted-foreground leading-relaxed">
                 I'm <strong>Md. Fahim Faysal</strong>, a dedicated college student with an unwavering passion for cybersecurity. 
                 Currently pursuing my intermediate education (Class 11), I'm actively preparing for higher studies in 
@@ -66,7 +66,7 @@ const About = () => {
           </div>
 
           {/* Right Content - Highlights Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 order-1 lg:order-2">
             {highlights.map((item, index) => (
               <Card key={index} className="skill-card">
                 <CardContent className="p-6">

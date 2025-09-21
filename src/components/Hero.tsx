@@ -43,12 +43,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
             <div className="space-y-4">
-              <h1 className="hero-text relative">
+              <h1 className="hero-text relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                 <span className="relative z-10">
                   Securing digital
                   <br />
@@ -60,39 +60,39 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground max-w-lg animate-fade-in">
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 animate-fade-in">
                 I'm <strong className="text-primary">Md. Fahim Faysal</strong>, a cybersecurity enthusiast and college student. 
                 Aspiring to become a cybersecurity consultant and independent bug hunter.
               </p>
-              <p className="text-lg text-muted-foreground animate-fade-in delay-200">
+              <p className="text-base sm:text-lg text-muted-foreground mx-auto lg:mx-0 animate-fade-in delay-200">
                 Currently mastering cybersecurity through hands-on learning: 
                 TryHackMe, Hack The Box, and real-world experience.
               </p>
             </div>
 
             {/* CTA Section */}
-            <div className="space-y-6 animate-fade-in delay-300">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={() => scrollToSection('portfolio')} className="cyber-button relative overflow-hidden group">
+            <div className="space-y-4 sm:space-y-6 animate-fade-in delay-300">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+                <Button onClick={() => scrollToSection('portfolio')} className="cyber-button relative overflow-hidden group w-full sm:w-auto">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                   View My Work
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button variant="outline" className="group hover-glow" onClick={generateCV}>
-                  <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                <Button variant="outline" className="group hover-glow w-full sm:w-auto" onClick={generateCV}>
+                  <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:animate-bounce" />
                   Download CV
                 </Button>
               </div>
 
               {/* Email Contact */}
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md">
+              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto lg:mx-0">
                 <Input 
                   type="email" 
                   placeholder="fahimfaysal127@gmail.com" 
-                  className="flex-1 bg-background/80 backdrop-blur-sm border-primary/20 focus:border-primary/50"
+                  className="flex-1 bg-background/80 backdrop-blur-sm border-primary/20 focus:border-primary/50 text-sm sm:text-base"
                   readOnly
                 />
-                <Button onClick={() => scrollToSection('contact')} variant="secondary" className="hover-glow">
+                <Button onClick={() => scrollToSection('contact')} variant="secondary" className="hover-glow whitespace-nowrap">
                   Connect With Me
                 </Button>
               </div>
@@ -100,7 +100,7 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Profile Image */}
-          <div className="relative">
+          <div className="relative order-first lg:order-last">
             {/* Holographic Frame */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-cyber-blue/20 rounded-2xl blur-xl animate-pulse-glow"></div>
             
@@ -110,7 +110,7 @@ const Hero = () => {
                 <img
                   src={fahimProfile}
                   alt="Md. Fahim Faysal - Cybersecurity Enthusiast"
-                  className="w-full max-w-lg mx-auto rounded-full shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300 aspect-square object-cover"
+                  className="w-64 sm:w-80 md:w-96 lg:w-full max-w-lg mx-auto rounded-full shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300 aspect-square object-cover"
                 />
                 
                 {/* Holographic Overlay */}

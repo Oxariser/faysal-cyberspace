@@ -66,17 +66,17 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Skills & Expertise</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+    <section id="skills" className="py-16 sm:py-20 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Skills & Expertise</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Developing comprehensive cybersecurity skills through hands-on learning and practical experience
           </p>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12 sm:mb-16">
           {skillCategories.map((category, categoryIndex) => (
             <Card key={categoryIndex} className="skill-card">
               <CardContent className="p-6">
@@ -105,8 +105,8 @@ const Skills = () => {
 
         {/* Learning Platforms */}
         <div>
-          <h3 className="text-2xl font-semibold text-center mb-8">Active Learning Platforms</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h3 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-8">Active Learning Platforms</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {platforms.map((platform, index) => (
               <Card key={index} className="skill-card text-center">
                 <CardContent className="p-6">
