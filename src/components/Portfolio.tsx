@@ -6,6 +6,21 @@ import { Badge } from '@/components/ui/badge';
 const Portfolio = () => {
   const projects = [
     {
+      title: "Sentry On Ltd — Founder & Developer",
+      description: "Founded Sentry On Ltd, a cybersecurity organization, and designed & developed its official website. The platform showcases the organization's services, mission, and security offerings with a modern, professional interface.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
+      category: "Cybersecurity Organization",
+      status: "Founder & Developer",
+      features: [
+        "Founded and lead the organization",
+        "Designed and developed the full website",
+        "Modern, responsive UI/UX",
+        "Showcases cybersecurity services"
+      ],
+      liveUrl: "https://sentryonltd.vercel.app/",
+      codeUrl: "https://sentryonltd.vercel.app/"
+    },
+    {
       title: "Personal Cybersecurity Portfolio",
       description: "A modern, responsive portfolio website showcasing my cybersecurity journey, skills, and aspirations. Built with React, TypeScript, and Tailwind CSS.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Responsive Design"],
