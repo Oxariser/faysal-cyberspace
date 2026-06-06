@@ -13,7 +13,7 @@ const Index = () => {
   useSmoothScroll();
   useScrollReveal();
   return (
-    <div className="min-h-screen scroll-perspective">
+    <div className="min-h-screen cursor-none scroll-perspective">
       <CursorTracker />
       <Header />
       <main>
