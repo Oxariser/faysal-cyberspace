@@ -11,21 +11,12 @@ export const useSmoothScroll = () => {
       touchMultiplier: 1.5,
     });
 
-    // Expose for anchor scrolls
-    (window as unknown as { __lenis?: Lenis }).__lenis = lenis;
-
-    // Override smooth scrollIntoView used by nav buttons
     const originalScrollIntoView = Element.prototype.scrollIntoView;
-    Element.prototype.scrollIntoView = function (arg?: boolean | ScrollIntoViewOptions) {
+    Element.prototype.scrollIntoView = function () {
       const rect = (this as HTMLElement).getBoundingClientRect();
-      const top = window.scrollY + rect.top;
-      lenis.scrollTo(top, { offset: -80 });
-      return undefined as unknown as void;
-      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      originalScrollIntoView;
-      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      arg;
-    };
+      const top = window.scrollY + rect.top - 80;
+      lenis.scrollTo(top);
+    } as typeof Element.prototype.scrollIntoView;
 
     let rafId: number;
     const raf = (time: number) => {
