@@ -13,18 +13,20 @@ const Index = () => {
   useSmoothScroll();
   useScrollReveal();
   return (
-    <div className="min-h-screen cursor-none scroll-perspective">
+    <>
       <CursorTracker />
-      <Header />
-      <main>
-        <section data-reveal className="reveal-3d"><Hero /></section>
-        <section data-reveal className="reveal-3d reveal-tilt-left"><About /></section>
-        <section data-reveal className="reveal-3d reveal-tilt-right"><Skills /></section>
-        <section data-reveal className="reveal-3d"><Portfolio /></section>
-        <section data-reveal className="reveal-3d reveal-tilt-left"><Contact /></section>
-      </main>
-      <Footer />
-    </div>
+      <div className="min-h-screen cursor-none scroll-perspective">
+        <Header />
+        <main>
+          <section data-reveal className="reveal-3d"><Hero /></section>
+          <section data-reveal className="reveal-3d reveal-tilt-left"><About /></section>
+          <section data-reveal className="reveal-3d reveal-tilt-right"><Skills /></section>
+          <section data-reveal className="reveal-3d"><Portfolio /></section>
+          <section data-reveal className="reveal-3d reveal-tilt-left"><Contact /></section>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 
