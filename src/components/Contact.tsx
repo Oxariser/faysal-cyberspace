@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Facebook, Send, MapPin, Phone } from 'lucide-react';
+import { Mail, Linkedin, Github, Facebook, Send, MapPin, Phone, GraduationCap, Target, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -144,12 +144,24 @@ const Contact = () => {
                   <MapPin className="h-5 w-5 text-primary mr-2" />
                   Current Status
                 </h4>
-                <div className="space-y-2 text-sm text-muted-foreground">
-                  <p>📚 Studying: Intermediate (Class 11)</p>
-                  <p>🎯 Focus: Cybersecurity & Computer Science</p>
-                  <p>📍 Location: Available for remote opportunities</p>
-                  <p>⏰ Response Time: Usually within 24 hours</p>
-                </div>
+                <ul className="space-y-3 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <GraduationCap className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                    <span><span className="text-foreground font-medium">Studying:</span> Intermediate (Class 11)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Target className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                    <span><span className="text-foreground font-medium">Focus:</span> Cybersecurity &amp; Computer Science</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                    <span><span className="text-foreground font-medium">Location:</span> Available for remote opportunities</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Clock className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                    <span><span className="text-foreground font-medium">Response Time:</span> Usually within 24 hours</span>
+                  </li>
+                </ul>
               </CardContent>
             </Card>
           </div>
