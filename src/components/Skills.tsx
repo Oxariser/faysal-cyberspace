@@ -35,7 +35,7 @@ const skills = [
 const platforms = [
   { name: 'TryHackMe', description: 'Active learner with multiple rooms completed', icon: tryhackmeLogo.url, isImage: true },
   { name: 'Hack The Box', description: 'Practicing penetration testing skills', icon: hacktheboxLogo.url, isImage: true },
-  { name: 'Secure Byte', description: 'Ambassador contributing to cybersecurity community', icon: '🛡️' },
+  { name: 'ResearchSec', description: 'Ambassador contributing to research-driven cybersecurity community', icon: researchsecLogo.url, isImage: true },
 ];
 
 const Skills = () => {
