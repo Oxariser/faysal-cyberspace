@@ -34,9 +34,9 @@ const skills = [
 ];
 
 const platforms = [
-  { name: 'TryHackMe', description: 'Active learner with multiple rooms completed', icon: tryhackmeLogo.url, isImage: true },
-  { name: 'Hack The Box', description: 'Practicing penetration testing skills', icon: hacktheboxLogo.url, isImage: true },
-  { name: 'ResearchSec', description: 'Ambassador contributing to research-driven cybersecurity community', icon: researchsecLogo.url, isImage: true },
+  { name: 'TryHackMe', description: 'Active learner with multiple rooms completed', icon: tryhackmeLogo, isImage: true },
+  { name: 'Hack The Box', description: 'Practicing penetration testing skills', icon: hacktheboxLogo, isImage: true },
+  { name: 'ResearchSec', description: 'Ambassador contributing to research-driven cybersecurity community', icon: researchsecLogo, isImage: true },
 ];
 
 const Skills = () => {
