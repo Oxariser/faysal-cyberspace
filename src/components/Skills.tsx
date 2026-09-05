@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import hacktheboxLogo from '@/assets/hackthebox-logo.png.asset.json';
+import tryhackmeLogo from '@/assets/tryhackme-logo.png.asset.json';
 
 const skills = [
   { name: 'Python', level: 85, icon: Code },
@@ -31,7 +32,7 @@ const skills = [
 ];
 
 const platforms = [
-  { name: 'TryHackMe', description: 'Active learner with multiple rooms completed', icon: '🎯' },
+  { name: 'TryHackMe', description: 'Active learner with multiple rooms completed', icon: tryhackmeLogo.url, isImage: true },
   { name: 'Hack The Box', description: 'Practicing penetration testing skills', icon: hacktheboxLogo.url, isImage: true },
   { name: 'Secure Byte', description: 'Ambassador contributing to cybersecurity community', icon: '🛡️' },
 ];
