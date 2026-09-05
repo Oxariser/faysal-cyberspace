@@ -14,9 +14,10 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import hacktheboxLogo from '@/assets/hackthebox-logo.png.asset.json';
-import tryhackmeLogo from '@/assets/tryhackme-logo.png.asset.json';
-import researchsecLogo from '@/assets/researchsec-logo.png.asset.json';
+
+const tryhackmeLogo = '/logos/tryhackme.png';
+const hacktheboxLogo = '/logos/hackthebox.png';
+const researchsecLogo = '/logos/researchsec.png';
 
 const skills = [
   { name: 'Python', level: 85, icon: Code },
