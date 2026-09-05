@@ -193,7 +193,15 @@ const Skills = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">
                   <div className="text-4xl mb-4 inline-block transition-transform duration-300 group-hover:scale-110">
-                    {platform.icon}
+                    {'isImage' in platform && platform.isImage ? (
+                      <img
+                        src={platform.icon}
+                        alt={`${platform.name} logo`}
+                        className="w-10 h-10 object-contain mx-auto"
+                      />
+                    ) : (
+                      platform.icon
+                    )}
                   </div>
                   <h4 className="text-lg font-semibold mb-2">{platform.name}</h4>
                   <p className="text-sm text-muted-foreground">{platform.description}</p>
