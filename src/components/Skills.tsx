@@ -16,6 +16,7 @@ import {
 import { Button } from '@/components/ui/button';
 import hacktheboxLogo from '@/assets/hackthebox-logo.png.asset.json';
 import tryhackmeLogo from '@/assets/tryhackme-logo.png.asset.json';
+import researchsecLogo from '@/assets/researchsec-logo.png.asset.json';
 
 const skills = [
   { name: 'Python', level: 85, icon: Code },
