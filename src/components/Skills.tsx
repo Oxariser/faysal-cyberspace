@@ -14,9 +14,10 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import hacktheboxLogo from '@/assets/hackthebox-logo.png.asset.json';
-import tryhackmeLogo from '@/assets/tryhackme-logo.png.asset.json';
-import researchsecLogo from '@/assets/researchsec-logo.png.asset.json';
+
+const tryhackmeLogo = '/logos/tryhackme.png';
+const hacktheboxLogo = '/logos/hackthebox.png';
+const researchsecLogo = '/logos/researchsec.png';
 
 const skills = [
   { name: 'Python', level: 85, icon: Code },
@@ -33,9 +34,9 @@ const skills = [
 ];
 
 const platforms = [
-  { name: 'TryHackMe', description: 'Active learner with multiple rooms completed', icon: tryhackmeLogo.url, isImage: true },
-  { name: 'Hack The Box', description: 'Practicing penetration testing skills', icon: hacktheboxLogo.url, isImage: true },
-  { name: 'ResearchSec', description: 'Ambassador contributing to research-driven cybersecurity community', icon: researchsecLogo.url, isImage: true },
+  { name: 'TryHackMe', description: 'Active learner with multiple rooms completed', icon: tryhackmeLogo, isImage: true },
+  { name: 'Hack The Box', description: 'Practicing penetration testing skills', icon: hacktheboxLogo, isImage: true },
+  { name: 'ResearchSec', description: 'Ambassador contributing to research-driven cybersecurity community', icon: researchsecLogo, isImage: true },
 ];
 
 const Skills = () => {
