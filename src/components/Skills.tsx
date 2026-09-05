@@ -14,6 +14,7 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import hacktheboxLogo from '@/assets/hackthebox-logo.png.asset.json';
 
 const skills = [
   { name: 'Python', level: 85, icon: Code },
@@ -31,7 +32,7 @@ const skills = [
 
 const platforms = [
   { name: 'TryHackMe', description: 'Active learner with multiple rooms completed', icon: '🎯' },
-  { name: 'Hack The Box', description: 'Practicing penetration testing skills', icon: '📦' },
+  { name: 'Hack The Box', description: 'Practicing penetration testing skills', icon: hacktheboxLogo.url, isImage: true },
   { name: 'Secure Byte', description: 'Ambassador contributing to cybersecurity community', icon: '🛡️' },
 ];
 
@@ -192,7 +193,15 @@ const Skills = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">
                   <div className="text-4xl mb-4 inline-block transition-transform duration-300 group-hover:scale-110">
-                    {platform.icon}
+                    {'isImage' in platform && platform.isImage ? (
+                      <img
+                        src={platform.icon}
+                        alt={`${platform.name} logo`}
+                        className="w-10 h-10 object-contain mx-auto"
+                      />
+                    ) : (
+                      platform.icon
+                    )}
                   </div>
                   <h4 className="text-lg font-semibold mb-2">{platform.name}</h4>
                   <p className="text-sm text-muted-foreground">{platform.description}</p>
